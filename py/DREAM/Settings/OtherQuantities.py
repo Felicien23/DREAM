@@ -6,7 +6,7 @@ from .. DREAMException import DREAMException
 
 
 class OtherQuantities:
-    
+
 
     # Here, we keep a list of the possible settings found in DREAM.
     # This allows to check the input the user gives, and emit warnings
@@ -31,6 +31,7 @@ class OtherQuantities:
         'fluid/Tcold_fre_coll',
         'fluid/Tcold_transport',
         'fluid/Tcold_radiation',
+        'fluid/Tcold_radiation_species'
         'fluid/Tcold_binding_energy',
 #        'fluid/Tcold_radiationFromNuS',
         'fluid/Tcold_ion_coll',
@@ -50,7 +51,7 @@ class OtherQuantities:
         'hottail/nu_s_f1', 'hottail/nu_s_f2',
         'hottail/nu_par_f1', 'hottail/nu_par_f2',
         'hottail/S_ava', 'hottail/S_compton', 'hottail/S_tritium',
-        'hottail/synchrotron_f1', 'hottail/synchrotron_f2', 'hottail/bremsstrahlung_f1', 
+        'hottail/synchrotron_f1', 'hottail/synchrotron_f2', 'hottail/bremsstrahlung_f1',
         'lnLambda',
         'nu_s',
         'nu_D',
@@ -63,8 +64,8 @@ class OtherQuantities:
         'runaway/nu_D_f1', 'runaway/nu_D_f2',
         'runaway/nu_s_f1', 'runaway/nu_s_f2',
         'runaway/nu_par_f1', 'runaway/nu_par_f2',
-        'runaway/S_ava', 'runaway/S_compton', 
-        'runaway/synchrotron_f1', 'runaway/synchrotron_f2', 'runaway/bremsstrahlung_f1', 
+        'runaway/S_ava', 'runaway/S_compton',
+        'runaway/synchrotron_f1', 'runaway/synchrotron_f2', 'runaway/bremsstrahlung_f1',
         'scalar',
         'scalar/ablationDrift',
         'scalar/E_mag',
@@ -79,6 +80,7 @@ class OtherQuantities:
         'scalar/energyloss_f_hot',
         'scalar/tIoniz',
         'scalar/Ypdot',
+        'stream',
         'ripple',
         'transport'
     ]

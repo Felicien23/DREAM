@@ -17,25 +17,26 @@ namespace DREAM {
         NIST *nist;
         AMJUEL *amjuel;
         IonHandler *ionHandler;
-        
+
         enum OptionConstants::ion_opacity_mode *opacity_modes;
 
         len_t id_ncold;
         len_t id_Tcold;
         len_t id_ni;
-        
-        real_t 
+
+        real_t
             bremsPrefactor,
             bremsRel1,
             bremsRel2;
-            
+
         bool includePRB = true;
 
-		real_t *Prad;
-		real_t *Pion;
+        real_t *Prad;
+        real_t *Pion;
+        real_t *Prad_species;
 
     protected:
-        virtual len_t GetNumberOfWeightsElements() override 
+        virtual len_t GetNumberOfWeightsElements() override
             {return ionHandler->GetNzs() * grid->GetNCells();}
 
         virtual void SetWeights() override;
@@ -54,6 +55,8 @@ namespace DREAM {
 			{return Prad;}
 		const real_t* GetRateOfChangeBindingEnergy() const
 			{return Pion;}
+        const real_t* GetRadiationPowerBySpecies() const
+            {return Prad_species;}
    };
 
 
